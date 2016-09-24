@@ -5,11 +5,11 @@
 module.exports = {
   things: [
     {
-      description: "get beer",
-      urgent: true
+      description: "Hamburger",
+      price: 5.00
     }, {
-      description: "dry cleaning",
-      urgent: false
+      description: "Donuts",
+      price: 2.00
     }
   ]
 }
