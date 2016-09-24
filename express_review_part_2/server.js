@@ -7,7 +7,8 @@ var logger  =     require("morgan");
 var bodyParser =  require("body-parser");
 var port    =     process.env.PORT || 3000;
 var app     =     express();
-var things    =     require("./data.js");
+// var things    =     require("./data.js");
+var methodOverride = require("method-override");
 
 //=========================
 // 2. MIDDLEWARES
@@ -21,37 +22,44 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 // public folder
+app.use(express.static(__dirname + '/public'));
 // method-override (PUT === EDIT STUFF.. we need this)
+app.use(methodOverride('_method'));
 
 
 //=========================
 // 3. CONTROLLERS
 //=========================
+//declare our food CONTROLLERS (2 parts)
+var foodController = require('./controllers/food.js');
+//2 params: route, data
+app.use('/food', foodController);
+
 //root route
 app.get('/', function(req, res){
   //view route/director, object === DATA to send to the "FRONT/CLIENT/BROSWER"
-  res.render('index.hbs', {data: things.things});
+  res.render('layout.hbs');
 });
 
-//food route
-app.get('/food', function(req, res){
-  res.send("YUM FOOD");
-});
-
-app.get('/:something', function(req, res){
-  res.send("ERROR 404");
-});
-
-app.get('/food/fruits', function(req, res){
-  res.send("FRUITS!!!! ");
-});
-
-app.get('/food/:id', function(req, res){
-  res.send("Oooh that sounds yummy");
-  var myFruit = req.params.id;
-  // console.log("This is req: ", req);
-  console.log("This is myFruit: ", myFruit);
-});
+// //food route
+// app.get('/food', function(req, res){
+//   res.send("YUM FOOD");
+// });
+//
+// app.get('/:something', function(req, res){
+//   res.send("ERROR 404");
+// });
+//
+// app.get('/food/fruits', function(req, res){
+//   res.send("FRUITS!!!! ");
+// });
+//
+// app.get('/food/:id', function(req, res){
+//   res.send("Oooh that sounds yummy");
+//   var myFruit = req.params.id;
+//   // console.log("This is req: ", req);
+//   console.log("This is myFruit: ", myFruit);
+// });
 
 //=========================
 // 2. LISTENERS

@@ -1,0 +1,10 @@
+<ul>
+  {{#each food}}
+  <li>{{description}}</li>
+  <li>${{price}}</li>
+
+  <form action='/food/{{@index}}?_method=Delete' method="POST">
+    <input type="submit" value="Delete {{description}}">
+  </form>
+{{/each}}
+</ul>

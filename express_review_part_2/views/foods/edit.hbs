@@ -1,0 +1,8 @@
+<h1>Edit {{food.description}}</h1>
+
+<!-- EDIT AND NEW HAVE FORMS -->
+<form action='/food/{{food.id}}?_method=PUT' method="POST">
+  <input type="text" name="description" value="{{food.description}}"/>
+  <input type="text" name="price" value="{{food.price}}"/>
+  <input type="submit" value="Update {{food.description}}"/>
+</form>
