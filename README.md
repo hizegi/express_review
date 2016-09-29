@@ -1,8 +1,9 @@
 # Node : Express.js Review
 
-This is the solution code for the tutorials on Express:
+This is the solution code for the tutorials on Express. I cover building an Express app from 'scratch' that has full CRUD functionality. This series does not include Models, Schemas, and Databases.
 
-Feel free to fork this repo to test out the code.
+###Requirements:
+-You should have [Node.js](https://nodejs.org/en/) installed.
 
 [Part 1 Video Tutorial](https://youtu.be/8QwUJUmcrZU)
 ###Part 1: Express + CRUD (Read)
@@ -12,3 +13,12 @@ Feel free to fork this repo to test out the code.
 - GET routes, req.params, debugging
 - Views: Handlebars, res.render
 - Data: module.exports, creating and accessing data objects
+
+[Part 2 Video Tutorial](https://youtu.be/fYYO-etJhMM)
+###Part 2: Controllers, Routers, Create 
+- express.Router()
+- body-parser
+
+[Part 3 Video Tutorial](https://youtu.be/XJYygh0lp8E)
+###Part 3: Edit, Update, Delete, CSS 
+- methodOverride
