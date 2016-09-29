@@ -5,8 +5,8 @@ This is the solution code for the tutorials on Express. I cover building an Expr
 ###Requirements:
 -You should have [Node.js](https://nodejs.org/en/) installed.
 
-[Part 1 Video Tutorial](https://youtu.be/8QwUJUmcrZU)
-###Part 1: Express + CRUD (Read)
+
+###[Part 1 Video Tutorial](https://youtu.be/8QwUJUmcrZU): Express + CRUD (Read)
 - Intro to Node, Express, npm, package.json
 - Creating an Express app from scratch.
 - server.js: Requirements, Middleware, Controllers, Listeners
@@ -14,11 +14,10 @@ This is the solution code for the tutorials on Express. I cover building an Expr
 - Views: Handlebars, res.render
 - Data: module.exports, creating and accessing data objects
 
-[Part 2 Video Tutorial](https://youtu.be/fYYO-etJhMM)
-###Part 2: Controllers, Routers, Create 
+###[Part 2 Video Tutorial](https://youtu.be/fYYO-etJhMM): Controllers, Routers, Create 
 - express.Router()
 - body-parser
 
-[Part 3 Video Tutorial](https://youtu.be/XJYygh0lp8E)
-###Part 3: Edit, Update, Delete, CSS 
+
+###[Part 3 Video Tutorial](https://youtu.be/XJYygh0lp8E): Edit, Update, Delete, CSS 
 - methodOverride
